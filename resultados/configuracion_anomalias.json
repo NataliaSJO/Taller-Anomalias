@@ -1,0 +1,73 @@
+{
+  "semilla": 42,
+  "filas_entrenamiento": 20000,
+  "entrenamiento": "Solo normales, misma muestra para todos",
+  "preprocesamiento": "StandardScaler ajustado solo a la muestra de entrenamiento",
+  "modelos": {
+    "Mahalanobis": {
+      "assume_centered": false,
+      "block_size": 1000,
+      "store_precision": true
+    },
+    "PCA": {
+      "copy": true,
+      "iterated_power": "auto",
+      "n_components": 10,
+      "n_oversamples": 10,
+      "power_iteration_normalizer": "auto",
+      "random_state": null,
+      "svd_solver": "full",
+      "tol": 0.0,
+      "whiten": false
+    },
+    "Isolation Forest": {
+      "bootstrap": false,
+      "contamination": "auto",
+      "max_features": 1.0,
+      "max_samples": 256,
+      "n_estimators": 200,
+      "n_jobs": -1,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "GMM": {
+      "covariance_type": "full",
+      "init_params": "kmeans",
+      "max_iter": 200,
+      "means_init": null,
+      "n_components": 4,
+      "n_init": 1,
+      "precisions_init": null,
+      "random_state": 42,
+      "reg_covar": 1e-05,
+      "tol": 0.001,
+      "verbose": 0,
+      "verbose_interval": 10,
+      "warm_start": false,
+      "weights_init": null
+    },
+    "LOF": {
+      "algorithm": "auto",
+      "contamination": "auto",
+      "leaf_size": 30,
+      "metric": "minkowski",
+      "metric_params": null,
+      "n_jobs": -1,
+      "n_neighbors": 20,
+      "novelty": true,
+      "p": 2
+    },
+    "K-means": {
+      "algorithm": "lloyd",
+      "copy_x": true,
+      "init": "k-means++",
+      "max_iter": 300,
+      "n_clusters": 8,
+      "n_init": 10,
+      "random_state": 42,
+      "tol": 0.0001,
+      "verbose": 0
+    }
+  }
+}
